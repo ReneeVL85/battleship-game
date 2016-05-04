@@ -1,32 +1,35 @@
-import React from "react";
-import ReactDOM from 'react-dom';
-import GridList from 'material-ui/lib/grid-list/grid-list';
+import React from 'react';
 
-const styles = {
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-  },
-  gridList: {
-    width: 500,
-    height: 400,
-    overflowY: 'auto',
-    marginBottom: 24,
-  },
-};
+class GridComponent extends React.Component {
+  getBackGroundColor() {
+    if (this.props.boat) {
+      return "#cfc";
+    }
 
-class GridComponent extends React.Component{
+    return "#ccc";
+  }
+  getGridStyle() {
+    let backgroundColor = this.getBackGroundColor();
 
+    return {
+      width: "38px",
+      height: "38px",
+      backgroundColor: backgroundColor,
+      float: "left",
+      border: "1px solid #fff"
+    };
+  }
+
+  onClick() {
+    this.props.onClick(this.props.index);
+  }
 
   render() {
-    return
-      (
-        <div style={styles.root}>
-          <GridList cellHeight={200} style={styles.gridList}>
-          </GridList>
-        </div>
-      )
-    }
+    let gridStyle = this.getGridStyle();
+    return (
+      <div style={gridStyle} onClick={this.onClick.bind(this)}></div>
+    )
+  }
 }
+
 export default GridComponent;
