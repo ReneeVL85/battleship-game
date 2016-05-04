@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import CanvasComponent from "./components/CanvasComponent"
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import GridComponent from "./components/GridComponent";
 
 ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<CanvasComponent/>, document.getElementById('container'));
+ReactDOM.render(<GridComponent />, document.getElementById('container'));
