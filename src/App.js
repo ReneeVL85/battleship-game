@@ -1,7 +1,8 @@
 import React from 'react';
 import GameModel from './models/GameModel';
 import GameListComponent from "./components/GameListComponent";
-import NewGameComponent from "./components/NewGameComponent"
+import NewGameComponent from "./components/NewGameComponent";
+import GridComponent from "./components/GridComponent";
 
 
 class App extends React.Component {
@@ -35,6 +36,7 @@ class App extends React.Component {
               <h1>battleship</h1>
               <NewGameComponent onCreate={this.createGame.bind(this)}/>
               <GameListComponent games={this.state.games}/>
+              <GridComponent />
             </div>
         );
     }
