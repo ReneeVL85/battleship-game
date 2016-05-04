@@ -29,7 +29,7 @@ class App extends React.Component {
     this.state = {
       games: [],
       currentGame: null,
-      boats: [1,2,14,15,16]
+      boats: []
 
     };
   }
@@ -81,7 +81,75 @@ class App extends React.Component {
     });
   }
 
+  countBoats(cell) {
+    let boats = this.state.boats;
 
+    if (i === true && i-10 === true && i-20 === true && i-30 === true && i-40 === true && i-50 === true  ||
+        i+10 === true && i === true && i-10 === true && i-20 === true && i-30 === true && i-40 === true ||
+        i+20 === true && i+10 === true && i === true && i-10 === true && i-20 === true && i-30 === true ||
+        i+30 === true && i+20 === true && i+10 === true && i === true && i-10 === true && i-20 === true ||
+        i+40 === true && i+30 === true && i+20 === true && i+10 === true && i === true && i-10 === true ||
+        i+50 === true && i+40 === true && i+30 === true && i+20 === true && i+10 === true && i === true ||
+        i === true && i+1 === true && i+2 === true && i+3 === true && i+4 === true && i+5 === true ||
+        i-1 === true && i === true && i+1 === true && i+2 === true && i+3 === true && i+4 === true ||
+        i-2 === true && i-1 === true && i === true && i+1 === true && i+2 === true && i+3 === true ||
+        i-3 === true && i-2 === true && i-1 === true && i === true && i+1 === true && i+2 === true ||
+        i-4 === true && i-3 === true && i-2 === true && i-1 === true && i === true && i+1 === true ||
+        i-5 === true && i-4 === true && i-3 === true && i-2 === true && i-1 === true && i === true
+      ){ return
+
+      }
+
+    if (i === true && i-10 === true && i-20 === true && i-30 === true && i-40 === true ||
+        i+10 === true && i === true && i-10 === true && i-20 === true && i-30 === true ||
+        i+20 === true && i+10 === true && i === true && i-10 === true && i-20 === true ||
+        i+30 === true && i+20 === true && i+10 === true && i === true && i-10 === true ||
+        i+40 === true && i+30 === true && i+20 === true && i+10 === true && i === true ||
+        i === true && i+1 === true && i+2 === true && i+3 === true && i+4 === true ||
+        i-1 === true && i === true && i+1 === true && i+2 === true && i+3 === true ||
+        i-2 === true && i-1 === true && i === true && i+1 === true && i+2 === true ||
+        i-3 === true && i-2 === true && i-1 === true && i === true && i+1 === true ||
+        i-4 === true && i-3 === true && i-2 === true && i-1 === true && i === true
+      ){
+
+      }
+
+    if (i === true && i-10 === true && i-20 === true && i-30 === true ||
+        i+10 === true && i === true && i-10 === true && i-20 === true ||
+        i+20 === true && i+10 === true && i === true && i-10 === true ||
+        i+30 === true && i+20 === true && i+10 === true && i === true ||
+        i === true && i+1 === true && i+2 === true && i+3 === true ||
+        i-1 === true && i === true && i+1 === true && i+2 === true ||
+        i-2 === true && i-1 === true && i === true && i+1 === true ||
+        i-3 === true && i-2 === true && i-1 === true && i === true
+      ){
+
+      }
+
+    if (i === true && i-10 === true && i-20 === true ||
+        i+10 === true && i === true && i-10 === true ||
+        i+20 === true && i+10 === true && i === true ||
+        i === true && i+1 === true && i+2 === true ||
+        i-1 === true && i === true && i+1 === true ||
+        i-2 === true && i-1 === true && i === true
+      ){
+
+      }
+
+    if (i === true && i-10 === true ||
+        i+10 === true && i === true ||
+        i-1 === true && i === true
+      ){
+
+      }
+    else{
+      // place your ships
+    }
+  }
+
+  storeBoat(){
+
+  }
 
     render() {
       console.log("haihai")
